@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quarterly Earnings — Interactive Report</title>
+  <!-- RevealJS core + theme (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme"/>
+  <!-- Syntax highlighting theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"/>
+  <style>
+    .chart { height: 360px; }
+    .accent { color: #0b7285; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Title / contact + fragments -->
+    <section>
+      <h1>Quarterly Earnings Report</h1>
+      <h3>Q2 FY2025</h3>
+      <p class="fragment">Prepared by Technical Consultant</p>
+      <p class="fragment">Contact: <a href="mailto:24f1002577@ds.study.iitm.ac.in">24f1002577@ds.study.iitm.ac.in</a></p>
+      <aside class="notes">
+        Welcome stakeholders. Use arrow keys to navigate. Press <strong>S</strong> for speaker notes; <strong>O</strong> for overview. Mention the contact email for follow‑ups.
+      </aside>
+    </section>
+
+    <!-- Markdown slide (requirement) -->
+    <section data-markdown>
+      <textarea data-template>
+## Agenda _(Markdown)_
+
+- Business highlights
+- Financial performance
+- Risk & outlook
+- **Demo:** modern presentation features
+- Q&A
+
+Notes: This slide proves Markdown support.
+      </textarea>
+      <aside class="notes">
+        Hit the high‑level agenda; keep it snappy.
+      </aside>
+    </section>
+
+    <!-- Animated elements with fragments (requirement) -->
+    <section>
+      <h2>Key KPIs (animated)</h2>
+      <ul>
+        <li class="fragment">Revenue growth <strong>+8.2% YoY</strong></li>
+        <li class="fragment fade-up">Operating margin <strong>+120 bps</strong></li>
+        <li class="fragment fade-in-then-semi-out">EPS <strong>₹ 12.34</strong></li>
+      </ul>
+      <aside class="notes">
+        Reveal fragments one by one to pace the story.
+      </aside>
+    </section>
+
+    <!-- Code sample with syntax highlighting (requirement) -->
+    <section>
+      <h2>Sample Analysis Code</h2>
+      <pre><code class="language-python" data-line-numbers="1-4|6-10|12-16">
+import pandas as pd
+
+net_income = 4_250_000_000   # INR
+shares_out = 344_500_000
+
+eps = net_income / shares_out
+
+pe = 22.7
+price = eps * pe
+
+print(f"EPS: ₹{eps:.2f}, Implied Price: ₹{price:.2f}")
+      </code></pre>
+      <aside class="notes">
+        Syntax highlighting via highlight.js. Use line focusing to guide the audience.
+      </aside>
+    </section>
+
+    <!-- Math equations (requirement) -->
+    <section>
+      <h2>Financial Math</h2>
+      <p>Net Present Value (NPV):</p>
+      <p>\[
+        \mathrm{NPV} \;=\; \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} \;-\; C_0
+      \]</p>
+      <p>Capital Asset Pricing Model (CAPM):</p>
+      <p>\[
+        \mathbb{E}[R_i] \;=\; R_f + \beta_i \big(\mathbb{E}[R_m]-R_f\big)
+      \]</p>
+      <aside class="notes">
+        Mention discount rate assumptions and risk‑free rate source.
+      </aside>
+    </section>
+
+    <!-- Optional live demo via iframe (lazy loaded) -->
+    <section>
+      <h2>Live Demo (optional)</h2>
+      <iframe data-src="https://observablehq.com/@observablehq/plot" data-preload style="width:100%;height:480px;"></iframe>
+      <aside class="notes">
+        Lazy‑loaded iframe keeps performance solid.
+      </aside>
+    </section>
+
+    <!-- Thank you + URL hint -->
+    <section>
+      <h2>Thank You</h2>
+      <p>Contact: <a href="mailto:24f1002577@ds.study.iitm.ac.in">24f1002577@ds.study.iitm.ac.in</a></p>
+      <p>GitHub Pages URL: <code>https://[USER].github.io/[REPO]/</code></p>
+      <aside class="notes">
+        Remind stakeholders where to access the deck after the meeting.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    controls: true,
+    progress: true,
+    history: true,
+    slideNumber: 'c/t',
+    transition: 'slide',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
+    math: {
+      mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+      tex: { inlineMath: [["\\(","\\)"],["$","$"]] }
+    }
+  });
+</script>
+</body>
+</html>
